@@ -12,6 +12,11 @@ class TextProcessor
         $this->formatter = $formatter;
     }
 
+    public function setFormatter($formatter): void
+    {
+        $this->formatter = $formatter;
+    }
+
     public function process(string $text): string
     {
         $result = $this->formatter->format($text);
