@@ -6,14 +6,12 @@ use Apara\PhpArchitectureLearning\Formatters\LowerCaseFormatter;
 use Apara\PhpArchitectureLearning\Formatters\UpperCaseFormatter;
 use Apara\PhpArchitectureLearning\TextProcessor;
 
-$strategy1 = new UpperCaseFormatter;
-$strategy2 = new LowerCaseFormatter;
-$process = new TextProcessor($strategy1);
+$upper = new UpperCaseFormatter;
+$lower = new LowerCaseFormatter;
+$processor = new TextProcessor($upper);
 
-$text = 'helLo world';
+echo $processor->process('sadAsd') . PHP_EOL;
 
-$result1 = $process->process($text);
-$process = new TextProcessor($strategy2);
-$result2 = $process->process($text);
+$processor->setFormatter($lower);
 
-var_dump($result2);
+echo $processor->process('sadAsd');
