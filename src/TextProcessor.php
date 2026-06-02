@@ -12,7 +12,7 @@ class TextProcessor
         $this->formatter = $formatter;
     }
 
-    public function setFormatter($formatter): void
+    public function setFormatter(FormatterInterface $formatter): void
     {
         $this->formatter = $formatter;
     }
